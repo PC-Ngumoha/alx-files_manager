@@ -1,7 +1,5 @@
 /**
  * @module utils/redis.js
- * @abstract Contains the code to setup a redis client and make same
- * available to other parts of the application.
  */
 import { promisify } from 'node:util';
 import { createClient } from 'redis';
