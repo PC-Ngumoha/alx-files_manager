@@ -19,8 +19,9 @@ import { createClient } from 'redis';
 class RedisClient {
   constructor() {
     this.client = createClient();
-    this.client.on('error', (err) => console.log(`Error: ${err}`));
-    this.client.on('connect', () => console.log('Connected Successfully'));
+    this.client.on('error', (err) => {
+      console.log(`Error: ${err.message}`);
+    });
     this.getAsync = promisify(this.client.get).bind(this.client);
     this.setAsync = promisify(this.client.set).bind(this.client);
     this.delAsync = promisify(this.client.del).bind(this.client);
