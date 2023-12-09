@@ -1,3 +1,7 @@
+/**
+ * @module tests/0-redisAndMongo.test.js
+ */
+
 import { expect, use, should } from 'chai';
 import chaiHttp from 'chai-http';
 import { promisify } from 'util';

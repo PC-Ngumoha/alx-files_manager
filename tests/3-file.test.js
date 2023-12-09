@@ -1,3 +1,8 @@
+/**
+ * @module tests/3-file.test.js
+ */
+
+
 import {
   expect, use, should, request,
 } from 'chai';
